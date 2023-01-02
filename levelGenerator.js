@@ -98,7 +98,7 @@ export function randomLevel(width, height) {
     finalPath.push(link);
   }
 
-  return finalPath;
+  return [finalPath, links];
 }
 
 function getLinks(path) {
