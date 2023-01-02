@@ -29,7 +29,6 @@ class Game {
   }
 
   updateScore() {
-    console.log(this.scoreDisplay);
     this.scoreDisplay.innerHTML = "Score: " + this.score;
   }
 

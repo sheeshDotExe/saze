@@ -22,6 +22,15 @@ export class Player {
   }
 
   move(direction) {
+    for (const visited of this.visited) {
+      if (
+        this.head[0] + direction[0][0] == visited[0] &&
+        this.head[1] + direction[0][1] == visited[1]
+      ) {
+        return;
+      }
+    }
+
     this.visited.push([
       this.head[0] + direction[0][0],
       this.head[1] + direction[0][1],
