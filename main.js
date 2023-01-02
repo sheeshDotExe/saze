@@ -69,6 +69,12 @@ class Game {
     }
   }
 
+  reset() {
+    this.player.clear(this.grid);
+    this.player.draw(this.grid);
+    this.levelStartTime = Date.now();
+  }
+
   newLevel(deduct) {
     if (deduct && globals.SHOULD_DEDUCT_FOR_NEW_LEVEL) {
       if (this.score >= globals.COST_FOR_NEW_LEVEL) {
@@ -94,6 +100,10 @@ window.onload = () => {
 
   document.querySelector(".next-level-button").addEventListener("click", () => {
     game.newLevel(true);
+  });
+
+  document.querySelector(".reset-button").addEventListener("click", () => {
+    game.reset();
   });
 
   window.addEventListener("keypress", (event) => {
