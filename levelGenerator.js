@@ -1,3 +1,5 @@
+import { globals } from "./globals.js";
+
 export const paths = [];
 
 function addCord(first, second) {
@@ -38,6 +40,10 @@ export function findLegalPaths(coord, width, height, checked) {
   const legalMoves = getLegalMoves(coord, width, height, checked);
 
   if (legalMoves.length === 0) {
+    return null;
+  }
+
+  if (paths.length >= globals.NUMBER_OF_LEVELS) {
     return null;
   }
 

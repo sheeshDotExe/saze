@@ -1,6 +1,6 @@
 export const globals = {
-  BOARD_WIDTH: 5,
-  BOARD_HEIGHT: 5,
+  BOARD_WIDTH: 8,
+  BOARD_HEIGHT: 8,
   BOARD_INSTANCE: null,
   START_COORDINATE: [0, 0],
   MOVE_COOLDOWN: 50,
@@ -9,4 +9,5 @@ export const globals = {
   TIME_BEFORE_FALLOFF: 10000,
   COST_FOR_NEW_LEVEL: 100,
   SHOULD_DEDUCT_FOR_NEW_LEVEL: false,
+  NUMBER_OF_LEVELS: 5000,
 };
