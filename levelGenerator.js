@@ -29,6 +29,7 @@ function getLegalMoves(coord, width, height, checked) {
   if (coord[1] < height - 1 && !contains(checked, [coord[0], coord[1] + 1])) {
     moves.push([0, 1]);
   }
+  moves.sort(()=>.5-Math.random())
   return moves;
 }
 
